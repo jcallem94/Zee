@@ -48,14 +48,17 @@ ParameterDefinitions = {
                LesHouches -> {HMIX,34}}},
 {Lambda5,    { LaTeX -> "\\lambda_5",
                OutputName -> Lam5,
+	       Real->True,
                LesHouches -> {HMIX,35}}},
 
 {Lambda6,    { LaTeX -> "\\lambda_6",
                OutputName -> Lam6,
+	       Real->True,
                LesHouches -> {HMIX,36}}},
 
 {Lambda7,    { LaTeX -> "\\lambda_7",
                OutputName -> Lam7,
+	       Real->True,
                LesHouches -> {HMIX,37}}},
 
 {Lambda8,    { LaTeX -> "\\lambda_8",
@@ -68,6 +71,7 @@ ParameterDefinitions = {
 
 {Lambda10,   { LaTeX -> "\\lambda_10",
 	      OutputName -> Lam10,
+	      Real->True,
 	      LesHouches -> {HMIX,40}}},
 
 {Lambdah,    { LaTeX -> "\\lambda_h",
@@ -85,6 +89,7 @@ ParameterDefinitions = {
 
 {M12,    {    LaTeX -> "m_{12}",
                OutputName -> M12,
+	      Real->True,
                LesHouches -> {HMIX,22}}},
 
 {Mh,     { LaTeX -> "M_h",
@@ -93,6 +98,7 @@ ParameterDefinitions = {
 
 {Mu,    { LaTeX -> "\\Mu",
 	      OutputName -> Mu,
+	  Real->True,
 	      LesHouches -> {HMIX,24}}},  
 
 {v1,        { Description -> "Down-VEV", LaTeX -> "v_1"}}, 
@@ -105,7 +111,7 @@ ParameterDefinitions = {
 
 {ZH,        { Description->"Scalar-Mixing-Matrix"}},
 {ZA,        { Description->"Pseudo-Scalar-Mixing-Matrix"}},
-{ZP,        { Description->"Charged-Mixing-Matrix"}},  
+{ZP,        { Description->"TheCharged-Mixing-Matrix"}},  
 
 
 {ThetaW,    { Description -> "Weinberg-Angle"}}, 
@@ -120,9 +126,7 @@ ParameterDefinitions = {
 {Ud,        {Description ->"Right-Down-Mixing-Matrix"}}, 
 {Ve,        {Description ->"Left-Lepton-Mixing-Matrix"}},
 {Ue,        {Description ->"Right-Lepton-Mixing-Matrix"}},
-{Vv,        {Description ->"Neutrino-Mixing-Matrix",
-             LesHouches -> VVMIX,
-             OutputName -> VV}}
+{Vv,        {Description ->"Neutrino-Mixing-Matrix"}}
 
  }; 
  

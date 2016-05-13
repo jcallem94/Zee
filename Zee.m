@@ -29,7 +29,7 @@ FermionFields[[5]] = {e, 3, conj[eR],     1, 1,  1};
 
 ScalarFields[[1]] =  {H1, 1, {H1p, H10},     1/2, 2,  1};
 ScalarFields[[2]] =  {H2, 1, {H2p, H20},     1/2, 2,  1};
-ScalarFields[[3]] =  {Hc, 1, conj[Hc],        -1, 1,  1};
+ScalarFields[[3]] =  {H3, 1, Hs,               -1, 1,  1};
 
 (*----------------------------------------------*)
 (*   DEFINITION                                 *)
@@ -47,14 +47,14 @@ DEFINITION[GaugeES][Additional]= {
 
 LagNoHC = -(M112 conj[H1].H1 + M222 conj[H2].H2 + Lambda1 conj[H1].H1.conj[H1].H1 + \
 		Lambda2 conj[H2].H2.conj[H2].H2 + Lambda3 conj[H2].H2.conj[H1].H1 + \
-	    Lambda4 conj[H2].H1.conj[H1].H2 + Lambda8 conj[Hc].Hc.conj[H1].H1 + \
-	    Lambda9 conj[Hc].Hc.conj[H2].H2 +  Mh conj[Hc].Hc + Lambdah conj[Hc].Hc.conj[Hc].Hc);
+	    Lambda4 conj[H2].H1.conj[H1].H2 + Lambda8 conj[H3].H3.conj[H1].H1 + \
+	    Lambda9 conj[H3].H3.conj[H2].H2 +  Mh conj[H3].H3 + Lambdah conj[H3].H3.conj[H3].H3);
 
 
 LagHC = -(Lambda5/2 conj[H2].H1.conj[H2].H1 + Lambda6 conj[H1].H1.conj[H1].H2 + Lambda7 conj[H2].H2.conj[H1].H2 + \
-	  Lambda10 conj[Hc].Hc.conj[H2].H1 - M12 conj[H1].H2 + Mu H1.H2.conj[Hc] 
-	  + Ye conj[H1].e.l + Yu H2.u.q + Yd conj[H1].d.q + Yh l.l.Hc			\
-	  + epsD conj[H2].d.q + epsE conj[H2].e.l + epsU H1.u.q);
+	  Lambda10 conj[H3].H3.conj[H2].H1 - M12 conj[H1].H2 + Mu conj[H3].conj[H1].conj[H2] + \
+	  Ye conj[H1].e.l + Yu H2.u.q + Yd conj[H1].d.q + Yh conj[H3].l.l + \
+	  epsD conj[H2].d.q + epsE conj[H2].e.l + epsU H1.u.q);
 
 (* Gauge Sector *)
 
@@ -77,7 +77,7 @@ DEFINITION[EWSB][VEVs]=
 DEFINITION[EWSB][MatterSector]=   
     { {{phi1, phi2}, {hh, ZH}},
       {{sigma1, sigma2}, {Ah, ZA}},
-      {{conj[H1p],conj[H2p], conj[Hc]},{Hm,ZP}},
+      {{H1p,H2p,conj[Hs]},{Hm,ZP}},
       {{vL}, {VL, Vv}},
       {{{dL}, {conj[dR]}}, {{DL,Vd}, {DR,Ud}}},
       {{{uL}, {conj[uR]}}, {{UL,Vu}, {UR,Uu}}},

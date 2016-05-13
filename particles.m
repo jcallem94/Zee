@@ -1,23 +1,27 @@
-
-
 ParticleDefinitions[GaugeES] = {
       {H0,  {    PDG -> {0},
                  Width -> 0, 
                  Mass -> Automatic,
                  FeynArtsNr -> 1,
-                 LaTeX -> "H^0",
+		 LaTeX -> "H^0",
                  OutputName -> "H0" }},                         
+
       
-      
-      {Hp,  {             PDG -> {0},
+      {Hp,  {    PDG -> {0},
                  Width -> 0, 
                  Mass -> Automatic,
                  FeynArtsNr -> 2,
                  LaTeX -> "H^+",
                  OutputName -> "Hp" }}, 
-                 
-               
-    
+
+      {Hs,  {    PDG -> {0},
+		 Width -> 0,
+		 Mass -> Automatic,
+		 FeynArtsNr -> 3,
+		 LaTeX -> "Hs^+",
+		 OutputName -> "Hs" }},
+      
+      
       {VB,   { Description -> "B-Boson"}},                                                   
       {VG,   { Description -> "Gluon"}},          
       {VWB,  { Description -> "W-Bosons"}},          
@@ -34,17 +38,25 @@ ParticleDefinitions[GaugeES] = {
             
       
       {hh ,  { Description -> "Higgs"}}, 
-      {Ah ,  { Description -> "Pseudo-Scalar Higgs"}},                                              
+      {Ah ,  { Description -> "Pseudo-Scalar Higgs"}},
+
+      
       {Hm,  {  Description -> "Charged Higgs",
-	       PDG -> {0, -37, -900037},
-	       PDG.IX -> {0, -100000601,  -100000602},
+	       PDG -> {0, 37, 900037},
+	       PDG.IX -> {0, 100000601,  100000602},
 	       Width -> {0, External, External},
 	       Mass -> {0, LesHouches, LesHouches},
-	       ElectricCharge -> -1,
-	       Latex -> {"H^-","H^+"},
-	       OutputName -> {"Hm","Hp"}
-	}},
+	       ElectricCharge -> 1,
+	       Latex -> {"H^-","H^+","Hs^+"},
+	       OutputName -> {"Hm","Hp","Hs"}  }},
 
+      {Hs,   {  Description -> "Charged higgs scalar",
+		 PDG -> {100000603},
+		 Mass -> LesHouches,
+		 ElectricCharge -> -1,
+		 LaTeX -> "\\H_s^+",
+		 OutputName -> "Hs" }}, 
+      
       {VP,   { Description -> "Photon"}}, 
       {VZ,   { Description -> "Z-Boson"}}, 
       {VG,   { Description -> "Gluon" }},          
@@ -78,7 +90,7 @@ ParticleDefinitions[GaugeES] = {
    {H20, {LaTeX -> "H_2^0"}},
    {H1p, {LaTeX -> "H_1^+"}},
    {H2p, {LaTeX -> "H_2^+"}},
-
+   {Hs,  {LaTex -> "H_s^+"}},
    {sigma1, {LaTeX -> "\\sigma_1"}},
    {sigma2, {LaTeX -> "\\sigma_2"}},
 
@@ -86,6 +98,7 @@ ParticleDefinitions[GaugeES] = {
    {phi2, {LaTeX -> "\\phi_2"}},
 
 
+    
    {dR,     {LaTeX -> "d_R" }},
    {eR,     {LaTeX -> "e_R" }},
    {lep,     {LaTeX -> "l" }},
